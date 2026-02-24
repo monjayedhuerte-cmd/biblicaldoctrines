@@ -417,3 +417,42 @@ input[type="submit"]:hover {
 .reference {
     font-weight: bold;
 }
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #010874;
+}
+
+.subtitle {
+    color: gray;
+}
+
+.article {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.article h2 {
+    margin-top: 40px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: #b8860b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b1a2b;
+    color: white;
+}
