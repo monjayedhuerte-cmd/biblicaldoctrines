@@ -1,0 +1,419 @@
+/* =====================================
+    GENERAL STYLES
+===================================== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f8f9fa;
+    color: #0b1a2b;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #0b1a2b;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    margin: 0 0 15px 0;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+/* =====================================
+    HEADER NAVIGATION
+===================================== */
+header {
+    padding: 20px 0;
+    text-align: center;
+    background: #0b1a2b;
+    color: white;
+}
+
+header a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+    HERO SECTION (Optional)
+===================================== */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* =====================================
+    SECTIONS
+===================================== */
+.section {
+    padding: 60px 20px;
+}
+
+.light-section {
+    background: #f8f9fa;
+}
+
+.dark-section {
+    background: #0b1a2b;
+    color: white;
+}
+
+/* =====================================
+    CARDS
+===================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    color: #0b1a2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card span,
+.card a.read-more {
+    display: inline-block;
+    margin-top: auto;
+    font-weight: bold;
+    color: #0b1a2b;
+    background: #f5c16c;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card span:hover,
+.card a.read-more:hover {
+    background: #e0ac4c;
+}
+
+/* =====================================
+    DOCTRINE DETAIL PAGES
+===================================== */
+.doctrine-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.doctrine-container img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.doctrine-container ul {
+    margin-left: 20px;
+}
+
+/* =====================================
+    BUTTONS
+===================================== */
+button,
+button:focus,
+input[type="submit"] {
+    background: #f5c16c;
+    border: none;
+    color: #0b1a2b;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: #e0ac4c;
+}
+
+/* =====================================
+    RESPONSIVE
+===================================== */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+.card img {
+    width: 80%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+/* Grid container for doctrine cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual doctrine card */
+.doctrine-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doctrine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Image container */
+.doctrine-image {
+    width: 80%;
+    height: 180px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.doctrine-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.doctrine-card:hover .doctrine-image img {
+    transform: scale(1.05);
+}
+
+/* Text styling */
+.doctrine-card h3 {
+    margin-bottom: 5px;
+    color: #0b1a2b;
+}
+
+.doctrine-card .verse {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.doctrine-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Read More button */
+.doctrine-card .read-more {
+    display: inline-block;
+    background: #f5c16c;
+    color: #0b1a2b;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.doctrine-card .read-more:hover {
+    background: #e0ac4c;
+}
+/* Adjust the image size inside doctrine card */
+.doctrine-card .doctrine-image img {
+    width: 150px;      /* smaller width */
+    height: 150px;     /* smaller height */
+    object-fit: cover; /* maintain aspect ratio and crop if needed */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 10px; /* center the image and add spacing below */
+}
+/* Grid for doctrine cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual doctrine card */
+.doctrine-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doctrine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Image container */
+.doctrine-image {
+    width: 100%;       
+    height: 150px;     /* adjust for smaller/larger images */
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.doctrine-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;
+    transition: transform 0.3s;
+}
+
+.doctrine-card:hover .doctrine-image img {
+    transform: scale(1.05);
+}
+
+/* Text styling */
+.doctrine-card h3 {
+    margin-bottom: 5px;
+    color: #0b1a2b;
+}
+
+.doctrine-card .verse {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.doctrine-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Read More button */
+.doctrine-card .read-more {
+    display: inline-block;
+    background: #f5c16c;
+    color: #0b1a2b;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.doctrine-card .read-more:hover {
+    background: #e0ac4c;
+}
+.verse-of-day {
+    background: #bd9e56;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.verse-of-day h2 {
+    margin-bottom: 15px;
+    color: #0b1a2b;
+}
+
+.verse-of-day p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.reference {
+    font-weight: bold;
+    color: #d9dbfc;
+}
+.daily-verse {
+    text-align: center;
+    padding: 40px 20px;
+    background: #010249;
+}
+
+.daily-verse h2 {
+    margin-bottom: 15px;
+}
+
+.daily-verse p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.reference {
+    font-weight: bold;
+}

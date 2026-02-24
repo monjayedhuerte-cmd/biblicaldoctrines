@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctrines</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background: #f8f9fa;
+        color: #0b1a2b;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    a { color: #f5c16c; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { padding: 20px 0; text-align: center; background: #0b1a2b; color: white; }
+    header a { color: white; margin: 0 10px; text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+
+    h1 { font-family: 'Merriweather', serif; text-align: center; margin-bottom: 30px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+
+    .card h3 { margin-top: 0; }
+    .card p { margin-bottom: 15px; }
+    .card a { display: inline-block; margin-top: 10px; font-weight: bold; color: #0b1a2b; background: #f5c16c; padding: 8px 15px; border-radius: 8px; text-decoration: none; }
+    .card a:hover { background: #e0ac4c; }
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">Home</a>
+    <a href="doctrines.html">Doctrines</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="contact.html">Contact</a>
+</header>
+
+<h1>All Doctrines</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>The Doctrine of Salvation</h3>
+        <p>Understanding the path to redemption through Christ. Learn how to receive eternal life.</p>
+        <a href="salvation.html">Read More →</a>
+    </div>
+
+    <div class="card">
+        <h3>The Grace of God</h3>
+        <p>Exploring God’s unmerited favor that saves and strengthens the believer.</p>
+        <a href="grace.html">Read More →</a>
+    </div>
+
+    <div class="card">
+        <h3>The Power of Faith</h3>
+        <p>Living by faith, trusting God, and receiving His promises.</p>
+        <a href="faith.html">Read More →</a>
+    </div>
+
+    <div class="card">
+        <h3>The Church of Christ</h3>
+        <p>The role and purpose of the Church, God’s body on earth.</p>
+        <a href="church.html">Read More →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

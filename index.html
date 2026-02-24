@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblical Doctrines</title>
+<link rel="stylesheet" href="styles.css"
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom, #0b1a2b, #1e3c72, #f5c16c);
+    color: white;
+}
+
+/* NAVIGATION */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(11, 26, 43, 0.85);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #f5c16c;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f5c16c;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+     /* Background image + gradient overlay */
+    background: linear-gradient(
+                  rgba(11,26,43,0.5), 
+                  rgba(245,193,108,0.3)
+               ),
+               url('images/hero-background.png') center center / cover no-repeat;
+}
+
+.hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: #f5c16c;
+    color: #0b1a2b;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.light-section {
+    background: #f8f9fa;
+    color: #0b1a2b;
+}
+
+.section h2 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(245,193,108,0.5);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+}
+
+/* ABOUT */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* POSTS */
+.post {
+    text-align: left;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    background: #0b1a2b;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.newsletter input {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+
+.newsletter button {
+    padding: 12px 25px;
+    background: #f5c16c;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media(max-width: 768px){
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style> 
+</head>
+<body>
+
+<header>
+    <div class="logo">📖 Biblical Doctrines</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="doctrine.html">Doctrines</a>
+        <a href="about.html">About</a>
+        <a href="#">Resources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Discover God’s Truth in Every Doctrine</h1>
+    <p>Biblical teachings explained clearly and faithfully.</p>
+    <a href="doctrine.html">
+    <button class="btn">Explore Doctrines</button>
+</a>
+
+</section>
+<section class="daily-verse">
+    <h2>Daily Bible Verse (KJV)</h2>
+    <p id="verse"></p>
+    <p id="reference" class="reference"></p>
+</section>
+
+<script>
+const verses = [
+{
+text: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+reference: "John 3:16"
+},
+{
+text: "Now faith is the substance of things hoped for, the evidence of things not seen.",
+reference: "Hebrews 11:1"
+},
+{
+text: "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
+reference: "Ephesians 2:8"
+},
+{
+text: "Thy word is a lamp unto my feet, and a light unto my path.",
+reference: "Psalm 119:105"
+}
+];
+
+const today = new Date().getDate();
+const index = today % verses.length;
+
+document.getElementById("verse").textContent = '"' + verses[index].text + '"';
+document.getElementById("reference").textContent = verses[index].reference + " (KJV)";
+</script>
+
+<section class="section light-section">
+    <h2>Featured Doctrines</h2>
+    <div class="cards">
+
+        <a href="salvation.html" class="card card-salvation">
+            <h3>The Doctrine of Salvation</h3>
+            <p>Understanding the path to redemption through Christ. Learn how to receive eternal life.</p>
+            <span>Read More →</span>
+        </a>
+
+        <a href="grace.html" class="card card-grace">
+            <h3>The Grace of God</h3>
+            <p>Exploring God’s unmerited favor that saves and strengthens the believer.</p>
+            <span>Read More →</span>
+        </a>
+
+        <a href="faith.html" class="card card-faith">
+            <h3>The Power of Faith</h3>
+            <p>Living by faith, trusting God, and receiving His promises.</p>
+            <span>Read More →</span>
+        </a>
+
+        <a href="church.html" class="card card-church">
+            <h3>The Church of Christ</h3>
+            <p>The role and purpose of the Church, God’s body on earth.</p>
+            <span>Read More →</span>
+        </a>
+
+    </div>
+</section>
+
+<section class="section light-section">
+    <h2>About Me</h2>
+    <div class="about">
+        <img src="ME.jpg" alt="Your Photo">
+        <div>
+            <p>Hello! My name is Edmon Jay Huerte. I am a passionate student of the bible, searching the truth and sharing it. Through this website, I post different doctrines in the Bible to help believers grow in faith and understanding.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section light-section">
+    <h2>Latest Posts</h2>
+    <div class="cards">
+        <div class="post">
+            <img src="images/grace.png">
+            <h3>The Meaning of Grace</h3>
+            <p>Understanding God’s grace in salvation.</p>
+        </div>
+        <div class="post">
+            <img src="images/Justification.png">
+            <h3>Understanding Justification</h3>
+            <p>What does it mean to be justified by faith?</p>
+        </div>
+        <div class="post">
+            <img src="images/living in faith.png">
+            <h3>Living a Life of Faith</h3>
+            <p>How to walk daily by faith.</p>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Stay Updated with the Latest Doctrines</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <button>Subscribe</button>
+</section>
+
+<footer>
+    © 2026 Biblical Doctrines | "Thy Word is Truth" – John 17:17
+</footer>
+
+</body>
+</html>
