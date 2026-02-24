@@ -454,5 +454,139 @@ input[type="submit"]:hover {
     text-align: center;
     padding: 20px;
     background: #0b1a2b;
-    color: white;
+    color: rgb(21, 7, 85);
+}
+.hook-section {
+    text-align: center;
+    padding: 70px 20px;
+    background: #c4c4c4;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hook-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hook-verse {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #0e0435;
+}
+
+.hook-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.about-card {
+    display: flex;
+    max-width: 900px;
+    background: #3c3a3f;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.about-img {
+    width: 300px;
+    object-fit: cover;
+}
+
+.about-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+    color: #d3d5d8;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #0b1a2b;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #0b1a2b;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #0b1a2b;
+    color: rgb(255, 255, 255);
+}
+.subscribe-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #797878;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.subscribe-section h2 {
+    margin-bottom: 15px;
+    color: #0b1a2b;
+}
+
+.subscribe-section p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#subscribeForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#subscribeForm input[type="email"] {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 250px;
+    font-size: 1rem;
+}
+
+#subscribeForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #f5c16c;
+    color: #0b1a2b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#subscribeForm button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#subscribeForm button:hover:not(:disabled) {
+    background: #e0ac4c;
+}
+
+.subscribe-message {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
 }

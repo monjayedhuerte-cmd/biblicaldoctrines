@@ -296,42 +296,45 @@ document.getElementById("reference").textContent = verses[index].reference + " (
     </div>
 </section>
 
-<section class="section light-section">
-    <h2>About Me</h2>
-    <div class="about">
-        <img src="ME.jpg" alt="Your Photo">
-        <div>
+<section class="about-section">
+    <div class="about-card">
+        <img src="ME.jpg" alt="About Me" class="about-img">
+        <div class="about-text">
+            <h2>About Me</h2>
             <p>Hello! My name is Edmon Jay Huerte. I am a passionate student of the bible, searching the truth and sharing it. Through this website, I post different doctrines in the Bible to help believers grow in faith and understanding.</p>
+            <a href="about.html" class="btn-outline">Read More</a>
         </div>
     </div>
 </section>
 
-<section class="section light-section">
-    <h2>Latest Posts</h2>
-    <div class="cards">
-        <div class="post">
-            <img src="grace.png">
-            <h3>The Meaning of Grace</h3>
-            <p>Understanding God’s grace in salvation.</p>
-        </div>
-        <div class="blog-card">
-    <h3>The Doctrine of Justification</h3>
-    <p>A biblical study on how a sinner is declared righteous before God through faith in Jesus Christ.</p>
-    <a href="justification.html" class="read-more">Read Article →</a>
-</div>
-        <div class="post">
-            <img src="living in faith.png">
-            <h3>Living a Life of Faith</h3>
-            <p>How to walk daily by faith.</p>
-        </div>
-    </div>
+<section class="hook-section">
+    <h2>Are You Certain of Your Standing Before God?</h2>
+
+    <p class="hook-verse">
+        “Examine yourselves, whether ye be in the faith.” — 2 Corinthians 13:5 (KJV)
+    </p>
+
+    <p>
+        Many speak of faith, yet few understand sound doctrine. 
+        What does the Bible truly teach about salvation, justification, grace, and faith?
+    </p>
+
+    <p>
+        This ministry exists to proclaim biblical truth clearly and faithfully 
+        from the King James Bible.
+    </p>
+
+    <a href="doctrine.html" class="btn">Explore Biblical Doctrine</a>
 </section>
 
-<section class="newsletter">
-    <h2>Stay Updated with the Latest Doctrines</h2>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <button>Subscribe</button>
+<section class="subscribe-section">
+    <h2>Subscribe to My Website</h2>
+    <p>Get updates and new doctrine studies delivered straight to your inbox.</p>
+    <form id="subscribeForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit" id="subscribeBtn" disabled>Subscribe</button>
+    </form>
+    <p id="subscribeMessage" class="subscribe-message"></p>
 </section>
 
 <footer>
