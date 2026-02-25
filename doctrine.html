@@ -3,93 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doctrines</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" href="styles.css">
+<title>Core Doctrines | Discovering God's Truth</title>
+
+<!-- Font Awesome Icons (No Upload Needed) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-    body {
-        font-family: 'Open Sans', sans-serif;
-        background: #f8f9fa;
-        color: #0b1a2b;
-        margin: 0;
-        padding: 20px;
-        line-height: 1.6;
-    }
 
-    a { color: #f5c16c; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: radial-gradient(circle at top, #1c2f4a, #0b1a2b 70%);
+    color: white;
+}
 
-    header { padding: 20px 0; text-align: center; background: #0b1a2b; color: white; }
-    header a { color: white; margin: 0 10px; text-decoration: none; }
-    header a:hover { text-decoration: underline; }
+/* ===== HEADER ===== */
+header {
+    background: #050f1e;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    h1 { font-family: 'Merriweather', serif; text-align: center; margin-bottom: 30px; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+header h1 {
+    color: #f5c16c;
+    margin: 0;
+}
 
-    .card {
-        background: white;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        transition: 0.3s;
-    }
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        cursor: pointer;
-    }
+nav a:hover {
+    color: #f5c16c;
+}
 
-    .card h3 { margin-top: 0; }
-    .card p { margin-bottom: 15px; }
-    .card a { display: inline-block; margin-top: 10px; font-weight: bold; color: #0b1a2b; background: #f5c16c; padding: 8px 15px; border-radius: 8px; text-decoration: none; }
-    .card a:hover { background: #e0ac4c; }
+/* ===== TITLE ===== */
+.doctrine-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 80px;
+    color: #f5c16c;
+    position: relative;
+}
+
+.doctrine-title::before,
+.doctrine-title::after {
+    content: "";
+    display: inline-block;
+    width: 120px;
+    height: 2px;
+    background: #f5c16c;
+    margin: 0 15px;
+    vertical-align: middle;
+}
+
+/* ===== CONTAINER ===== */
+.doctrine-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 20px;
+    flex-wrap: wrap;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: linear-gradient(to bottom, #132a46, #0b1a2b);
+    border: 1px solid rgba(245, 193, 108, 0.3);
+    border-radius: 15px;
+    width: 260px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.card i {
+    font-size: 50px;
+    color: #f5c16c;
+    margin-bottom: 25px;
+}
+
+.card h3 {
+    color: #f5c16c;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+/* ===== BUTTON ===== */
+.card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #f5c16c, #d9a441);
+    color: #0b1a2b;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background: linear-gradient(to right, #ffd47f, #f5c16c);
+}
+
+/* ===== HOVER EFFECT ===== */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(245, 193, 108, 0.4);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #050f1e;
+    padding: 40px 20px;
+    text-align: center;
+    color: #aaa;
+    margin-top: 80px;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-    <a href="index.html">Home</a>
-    <a href="doctrines.html">Doctrines</a>
-    <a href="about.html">About</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
+    <h1>Discovering God's Truth</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="doctrines.html">Doctrines</a>
+        <a href="about.html">About</a>
+    </nav>
 </header>
 
-<h1>All Doctrines</h1>
+<h2 class="doctrine-title">Core Doctrines</h2>
 
-<div class="cards">
+<div class="doctrine-container">
 
     <div class="card">
+        <i class="fas fa-cross"></i>
         <h3>The Doctrine of Salvation</h3>
-        <p>Understanding the path to redemption through Christ. Learn how to receive eternal life.</p>
-        <a href="salvation.html">Read More →</a>
+        <p>Salvation by grace through faith in Jesus Christ alone (Ephesians 2:8-9 KJV).</p>
+        <a href="salvation.html">Read Article →</a>
     </div>
 
     <div class="card">
-        <h3>The Grace of God</h3>
-        <p>Exploring God’s unmerited favor that saves and strengthens the believer.</p>
-        <a href="grace.html">Read More →</a>
+        <i class="fas fa-dove"></i>
+        <h3>The Doctrine of Grace</h3>
+        <p>The unmerited favor of God given to undeserving sinners.</p>
+        <a href="grace.html">Read Article →</a>
     </div>
 
     <div class="card">
-        <h3>The Power of Faith</h3>
-        <p>Living by faith, trusting God, and receiving His promises.</p>
-        <a href="faith.html">Read More →</a>
-    </div>
-
-    <div class="card">
-        <h3>The Church of Christ</h3>
-        <p>The role and purpose of the Church, God’s body on earth.</p>
-        <a href="church.html">Read More →</a>
-    </div>
-
-    <div class="card">
+        <i class="fas fa-book-bible"></i>
         <h3>The Doctrine of Justification</h3>
-        <p>The Biblical Study from the King James Bible</p>
-        <a href="justification.html">Read More →</a>
+        <p>Declared righteous before God through faith in Christ (Romans 5:1 KJV).</p>
+        <a href="justification.html">Read Article →</a>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-hands-praying"></i>
+        <h3>The Doctrine of Faith</h3>
+        <p>Living by faith according to the Word of God (Hebrews 11:6 KJV).</p>
+        <a href="faith.html">Read Article →</a>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-church"></i>
+        <h3>The Doctrine of the Church</h3>
+        <p>The Role and purpose of the Church, God's body on earth.</p>
+        <a href="church.html">Read Article →</a>
     </div>
 
 </div>
+
+<footer>
+    <p>© 2026 Biblical Doctrines</p>
+    <p>All Scripture from the King James Bible</p>
+</footer>
 
 </body>
 </html>
