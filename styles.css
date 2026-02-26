@@ -146,7 +146,7 @@ header a:hover {
 .doctrine-container {
     max-width: 900px;
     margin: 40px auto;
-    background: white;
+    background: rgb(211, 211, 211);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -459,7 +459,7 @@ input[type="submit"]:hover {
 .hook-section {
     text-align: center;
     padding: 70px 20px;
-    background: #c4c4c4;
+    background: #190250;
     max-width: 900px;
     margin: auto;
 }
@@ -472,7 +472,7 @@ input[type="submit"]:hover {
 .hook-verse {
     font-style: italic;
     margin-bottom: 20px;
-    color: #0e0435;
+    color: #afafaf;
 }
 
 .hook-section p {
@@ -589,4 +589,206 @@ input[type="submit"]:hover {
     margin-top: 15px;
     color: green;
     font-weight: bold;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .featured-doctrines {
+    grid-template-columns: 1fr;
+  }
+}
+#dailyVerseContainer {
+  background: linear-gradient(135deg, #fff8e7, #f9e07f);
+  border-radius: 12px;
+  padding: 25px 35px;
+  text-align: center;
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.5s;
+}
+
+#dailyVerseContainer:hover {
+  transform: scale(1.05);
+}
+
+#dailyVerse {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(241,196,15,0.5);
+}
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+html {
+  scroll-behavior: smooth;
+}
+#dailyVerseContainer {
+  transition: all 1s ease;
+}
+
+#dailyVerseContainer.new-verse {
+  animation: glow 1.5s ease-in-out;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(241,196,15,0.5); }
+  50% { box-shadow: 0 0 20px rgba(241,196,15,0.9); }
+  100% { box-shadow: 0 0 5px rgba(241,196,15,0.5); }
+}
+
+/* Header */
+#mainHeader {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #000f38, #070138);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  font-family: 'Zt Nature', serif;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Header Container */
+.header-container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 10px 20px; /* Compact padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fdf8f8;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo a:hover {
+  color: #f1c40f;
+  transform: scale(1.05);
+}
+
+/* Navigation Menu */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* smaller gap = compact */
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 1000;
+  font-size: 0.95rem;
+  position: center;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.menu ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f1c40f;
+  transition: width 0.3s;
+  margin-top: 2px;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+.menu ul li a:hover {
+  color: #f1c40f;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Shrink on scroll */
+#mainHeader.shrink {
+  padding: 5px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff8d6;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

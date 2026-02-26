@@ -24,19 +24,6 @@ body {
     color: white;
 }
 
-/* NAVIGATION */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(11, 26, 43, 0.85);
-    backdrop-filter: blur(6px);
-}
-
 .logo {
     font-family: 'Merriweather', serif;
     font-size: 22px;
@@ -106,8 +93,8 @@ nav a:hover {
 }
 
 .light-section {
-    background: #f8f9fa;
-    color: #0b1a2b;
+    background: #919191;
+    color: #040735;
 }
 
 .section h2 {
@@ -124,7 +111,7 @@ nav a:hover {
 }
 
 .card {
-    background: white;
+    background: rgb(214, 214, 214);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -207,15 +194,30 @@ footer {
 </head>
 <body>
 
-<header>
-    <div class="logo">📖 Biblical Doctrines</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="doctrine.html">Doctrines</a>
-        <a href="about.html">About</a>
-        <a href="#">Resources</a>
-        <a href="contact.html">Contact</a>
+<header id="mainHeader">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">📖 Biblical Doctrines</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctrine.html">Doctrines</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 </header>
 
 <section class="hero">
@@ -226,42 +228,14 @@ footer {
 </a>
 
 </section>
-<section class="daily-verse">
-    <h2>Daily Bible Verse (KJV)</h2>
-    <p id="verse"></p>
-    <p id="reference" class="reference"></p>
-</section>
 
-<script>
-const verses = [
-{
-text: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
-reference: "John 3:16"
-},
-{
-text: "Now faith is the substance of things hoped for, the evidence of things not seen.",
-reference: "Hebrews 11:1"
-},
-{
-text: "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
-reference: "Ephesians 2:8"
-},
-{
-text: "Thy word is a lamp unto my feet, and a light unto my path.",
-reference: "Psalm 119:105"
-}
-];
-
-const today = new Date().getDate();
-const index = today % verses.length;
-
-document.getElementById("verse").textContent = '"' + verses[index].text + '"';
-document.getElementById("reference").textContent = verses[index].reference + " (KJV)";
-</script>
+<div id="dailyVerseContainer">
+  <p id="dailyVerse">Loading verse...</p>
+</div>
 
 <section class="section light-section">
     <h2>Featured Doctrines</h2>
-    <div class="cards">
+    <div class="cards fade-in">
 
         <a href="salvation.html" class="card card-salvation">
             <h3>The Doctrine of Salvation</h3>
@@ -340,6 +314,6 @@ document.getElementById("reference").textContent = verses[index].reference + " (
 <footer>
     © 2026 Biblical Doctrines | "Thy Word is Truth" – John 17:17
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
