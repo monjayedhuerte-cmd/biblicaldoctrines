@@ -52,7 +52,7 @@ header a:hover {
     HERO SECTION (Optional)
 ===================================== */
 .hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('hero-background.png') no-repeat center center/cover;
     height: 500px;
     display: flex;
     align-items: center;
@@ -374,44 +374,6 @@ input[type="submit"]:hover {
 
 .doctrine-card .read-more:hover {
     background: #e0ac4c;
-}
-.verse-of-day {
-    background: #bd9e56;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 12px;
-    margin: 40px auto;
-    max-width: 800px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.verse-of-day h2 {
-    margin-bottom: 15px;
-    color: #0b1a2b;
-}
-
-.verse-of-day p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.reference {
-    font-weight: bold;
-    color: #d9dbfc;
-}
-.daily-verse {
-    text-align: center;
-    padding: 40px 20px;
-    background: #010249;
-}
-
-.daily-verse h2 {
-    margin-bottom: 15px;
-}
-
-.daily-verse p {
-    font-size: 1.1rem;
-    margin: 5px 0;
 }
 
 .reference {
